@@ -29,3 +29,4 @@ def book_list():
     page = request.args.get('page', default=1, type=int)
     return f'您获取的是第{page}的图书列表！'
 ```
+# 模版渲染
