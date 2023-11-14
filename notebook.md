@@ -19,3 +19,4 @@ def blog_detail(bolg_id):
     return f'Hello {blog_id} '
 ```
 2. 可选参数的传递
+
