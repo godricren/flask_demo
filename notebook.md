@@ -20,3 +20,12 @@ def blog_detail(bolg_id):
 ```
 2. 可选参数的传递
 
+```python
+from flask import request
+@app.route('book/list')
+def book_list():
+    #  arguments 参数
+    #  requests.args 类字典类型
+    page = request.args.get('page', default=1, type=int)
+    return f'您获取的是第{page}的图书列表！'
+```
