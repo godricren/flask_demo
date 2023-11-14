@@ -22,8 +22,13 @@ def hello_world():  # put application's code here
  开启方式：Edit configurations -> FLASK_DEBUG
  app.run(debug = True)
 2. host
-局域网中，访问当前主机
-port修改
+ 局域网中其他终端通过IP地址访问当前主机
+ 开启方式：
+  edit configurations --> additional options: --host=0.0.0.0
+  app.run(host = 0.0.0.0)
+3. port修改
+ 默认使用5000，端口号如果需要修改
+ edit configurations --> additional options: --port=8000
 '''
 if __name__ == '__main__':
     app.run()
