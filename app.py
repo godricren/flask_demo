@@ -15,6 +15,25 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello you!'
+
+
+@app.route('/profile')
+def profile():
+    return "I'm profile center"
+
+@app.route('/blog/list')
+def blog_list():
+    return "I'm blog list."
+
+# 带参数的url
+@app.route('/blog/<blog_id>')
+def blog_detail(blog_id):
+    return f'hello {blog_id}'
+
+# 带参数的url
+@app.route('/blog/<int:blog_id>')
+def blog_detail(blog_id):
+    return f'hello {blog_id}'
 '''
 1. debug模式
  1.1 修改代码后不需要停止项目，直接在浏览器中刷新就可以看到修改效果
